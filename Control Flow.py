@@ -22,3 +22,4 @@ pin = input("Please choose a 4-digit security pin: ")
 
 print("\nThank you", firstName + ", We see that you set your PIN to", pin)
 
+print("\nWould you like to make a transaction trough our ATM") 
