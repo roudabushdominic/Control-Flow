@@ -29,7 +29,19 @@ if atm == "yes":
     # This part of the program will be asking users to complete a transaction through the ATM
     print("Please enter your ATM Card\n")
     print("Welcome to Cash-R-Us ATM",firstName,lastName,"\n")
-    userPIN = input("What is your 4 digit PIN: ")
+
+    for i in range (3, 0, -1):
+        userPIN = input("What is your 4 digit PIN: ")
+        if userPIN == pin:
+            break
+        else:
+            print("Incorrect - Try again!")
+    if i == 1:
+        print("You have been denied access")
+    else:
+        print("Password has been accepted")
+
+
 
     if pin == userPIN:
         balance = 674
@@ -43,7 +55,7 @@ if atm == "yes":
             print("Your new balance is: $" + str(balance))
         
         
-        elif typeOfTransaction == "d": 
+        elif typeOfTransaction == "d":
             depositAmount = int(input("Enter amount of Deposit: "))
             balance = balance + depositAmount
             print("Your new balance is: $" + str(balance))
