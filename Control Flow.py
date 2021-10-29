@@ -44,9 +44,13 @@ if atm == "yes":
         
         
         elif typeOfTransaction == "d": 
-            depositAmount = int(imput("Enter amount of Deposit: "))
+            depositAmount = int(input("Enter amount of Deposit: "))
             balance = balance + depositAmount
             print("Your new balance is: $" + str(balance))
+
+
+        else:
+            print("Your current balance is: $" + str(balance))
         
         
         
